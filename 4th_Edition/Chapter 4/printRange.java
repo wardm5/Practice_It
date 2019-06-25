@@ -6,7 +6,7 @@ public void printRange(int a, int b) {
              System.out.print(i + " ");
          }
     } else {
-         for (int i = b; i <= a; i--) {
+         for (int i = a; i >= b; i--) {
              System.out.print(i + " ");
          }
     }
