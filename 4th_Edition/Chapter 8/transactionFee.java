@@ -5,12 +5,12 @@ public boolean transactionFee(double fee){
     double totalFee = 0.0;
     double bal = balance;
     if (trans == 0) 
-        return false;
+        return false;
     for(int i = 1; i <= trans; i++){
         totalFee += fee*i;
         if (totalFee >= bal) {
             balance = 0.0;
-            return false;
+            return false;
         }   
     }
     balance = bal - totalFee;
