@@ -30,3 +30,15 @@ int countEmpty() {
 //    }
 //    return countEmpty(node.left) + countEmpty(node.right);
 //}
+
+
+public int countEmpty(){
+    if (overallRoot == null) 
+        return 1;
+    return helper(overallRoot);
+}
+public int helper(IntTreeNode root) {
+    if (root == null)
+        return 1;
+    return helper(root.left) + helper(root.right);
+}
