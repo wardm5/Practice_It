@@ -34,3 +34,14 @@ public int depthSum() {
 //    return level * node.data +
 //        depthSum(node.left, level + 1) + depthSum(node.right, level + 1);
 //}
+
+public int depthSum() {
+    return helper(overallRoot, 0);
+}
+public int helper(IntTreeNode root, int level) {
+    if (root == null)
+        return 0;
+    else
+        return helper(root.left, level + 1) + helper(root.right, level + 1) 
+             + (root.data * (level + 1));
+}
