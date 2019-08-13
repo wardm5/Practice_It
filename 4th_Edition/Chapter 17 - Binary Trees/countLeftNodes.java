@@ -18,3 +18,16 @@ public int countLeftNodes() {
     }
     return count;
 }
+
+public int countLeftNodes() {
+    if (overallRoot == null) 
+        return 0;
+    return helper(overallRoot);
+}
+public int helper(IntTreeNode root) {
+    if (root == null)
+        return 0;
+    if (root.left != null)
+        return helper(root.left) + 1 + helper(root.right);
+    return helper(root.right);
+}
