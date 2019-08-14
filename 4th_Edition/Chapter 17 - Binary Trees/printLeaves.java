@@ -38,3 +38,20 @@ void printLeaves() {
 //    printLeaves(root.right);
 //    printLeaves(root.left);
 //}
+
+public void printLeaves() {
+    if (overallRoot == null) {
+        System.out.println("no leaves");
+        return;
+    }
+    System.out.print("leaves: ");
+    helper(overallRoot);
+}
+public void helper(IntTreeNode root) {
+    if (root == null)
+        return;
+    if (root.right == null && root.left == null)
+        System.out.print(root.data + " ");
+    helper(root.right);
+    helper(root.left);
+}
