@@ -35,9 +35,18 @@ boolean isFull() {
 //    if (root.left == null && root.right != null)  {
 //        return false;
 //    }
-//        
 //    if (root.left != null && root.right == null ) {
 //        return false;
 //    }
 //    return isFull(root.right) && isFull(root.left) ;
 //}
+public boolean isFull(){
+    return helper(overallRoot);
+}
+public boolean helper(IntTreeNode root) {
+    if (root == null)
+        return true;
+    else if (root.left != null && root.right == null || root.left == null && root.right != null) 
+        return false;
+    return helper(root.left) && helper(root.right);
+}
