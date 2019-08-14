@@ -43,3 +43,17 @@ void printLevel(int target) {
 //    printLevel(root.left, target, level + 1);
 //    printLevel(root.right, target, level+1);
 //}
+
+public void printLevel(int n) {
+    if ( n <= 0)
+        throw new IllegalArgumentException();
+    helper(overallRoot, n, 1);
+}
+public void helper(IntTreeNode root, int n, int level) {
+    if (root == null)
+        return;
+    else if (level == n)
+        System.out.println(root.data);
+    helper(root.left, n, level + 1);
+    helper(root.right, n, level + 1);
+}
