@@ -27,13 +27,23 @@ public boolean equals2(IntTree t2) {
 private boolean equals2(IntTreeNode n1, IntTreeNode n2) {
     if(n1 == null && n2 == null)
         return true;
-        
     if(n1 == null && n2 != null)
         return false;
-        
     if(n1 != null && n2 == null)
         return false;
-        
     return n1.data == n2.data && equals2(n1.left, n2.left) &&
         equals2(n1.right, n2.right);
+}
+
+public boolean equals2(IntTree tree) {
+    return helper(overallRoot, tree.getRoot());
+}
+
+public boolean helper(IntTreeNode root1, IntTreeNode root2) {
+    if (root1 == null && root2 == null)
+        return true;
+    else if (root1 == null || root2 == null || root1.data != root2.data)
+        return false;
+    else
+        return helper(root1.left, root2.left) && helper(root1.right, root2.right);
 }
