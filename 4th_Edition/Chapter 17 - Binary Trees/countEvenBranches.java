@@ -30,3 +30,14 @@ public int countEvenBranches() {
 //        count++;
 //    }
 //}
+public int countEvenBranches() {
+    return helper(overallRoot);
+}
+public int helper(IntTreeNode root) {
+    if (root == null)
+        return 0;
+    else if (root.data % 2 == 0 && (root.left != null || root.right != null))
+        return helper(root.left) + helper(root.right) + 1;
+    else 
+        return helper(root.left) + helper(root.right);
+}
