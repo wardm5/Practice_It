@@ -22,15 +22,12 @@
 //     return size;
 // }
 
-int count = 0;
 public int numberNodes() {
-    helper(overallRoot, 1);
-    return count;
+    return helper(overallRoot, 1) - 1;
 }
 public int helper(IntTreeNode root, int n) {
     if (root == null)
         return n;
-    count++;
     root.data = n;
     int left = helper(root.left, n + 1);
     return helper(root.right, left);
