@@ -1,7 +1,8 @@
 ## Practice It - https://practiceit.cs.washington.edu/problem/list
-This repository is designed to store the solutions that I have done for the Pratice It website. This website is used by many students at the University of Washington in the intro computer science courses to learn and pratice algoirthms and data structures using Java. Notable chapters include: 
+This repository is designed to store my solutions for the Pratice It website. This website, made by Marty Stepp and other UW Facalty, is used by many students at the University of Washington and Bellevue College in the introductory computer science courses. Many students continue to use this website as a way to learn and pratice coding, algoirthms, and data structures using Java. #Notable chapters include:#
 
-* ArrayLists                * Trees
+* ArrayLists                
+* Trees
 * Recurrsion
 * LinkedLists
 * Stacks and Queues
